@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "tsc -b && node var/build/index.js"
+    "start": "yarn tsc -b && node var/build/index.js"
   },
   "dependencies": {
     "express": "^4.17.1"
@@ -12,5 +12,8 @@
   "prettier": {
     "tabWidth": 4,
     "singleQuote": true
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
   }
 }
