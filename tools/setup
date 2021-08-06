@@ -1,0 +1,29 @@
+#!/bin/bash
+
+PARENT_PATH=$(cd "$(dirname "{BASH_SOURCE[0]}")"; pwd -P)
+cd $PARENT_PATH
+
+handle_error() {
+    if [ $? -eq 0 ];
+    then
+        echo "Success."
+    else
+        echo "An error occurs during setup. See above for error messages."
+        exit 1
+    fi
+
+}
+
+echo "Installing frontend dependencies"
+cd app
+yarn install
+handle_error
+
+echo "Installing backend dependencies"
+cd ../server
+yarn install
+handle_error
+
+echo 'Use "cd app && yarn start" to  run the frontend'
+echo 'Use "cd server && yarn start" to run the backend'
+echo 'Or use "tools/run" to run them at the same time'
