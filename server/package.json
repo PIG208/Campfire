@@ -1,19 +1,21 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "Apache-2.0",
-  "scripts": {
-    "start": "yarn tsc -b && node var/build/index.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "prettier": {
-    "tabWidth": 4,
-    "singleQuote": true
-  },
-  "devDependencies": {
-    "typescript": "^4.3.5"
-  }
+    "name": "server",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "Apache-2.0",
+    "scripts": {
+        "start": "yarn tsc -b && node var/build/index.js",
+        "format": "yarn prettier --config package.json -w ./src/**/*.{ts,tsx,js,jsx} *.json"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "singleQuote": true
+    },
+    "devDependencies": {
+        "prettier": "^2.3.2",
+        "typescript": "^4.3.5"
+    }
 }

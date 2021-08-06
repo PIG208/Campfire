@@ -1,10 +1,10 @@
-import express, {Response} from "express";
+import express, { Response } from 'express';
 
-const app = express()
+const app = express();
 
-app.get("/", (_, res: Response) =>{
-    res.send("Hello world");
+app.get('/', (_, res: Response) => {
+    res.send('Hello world');
 });
 
-console.log("Start listening at 8080");
+console.log('Start listening at 8080');
 app.listen(8080);

@@ -1,13 +1,13 @@
 {
     "compilerOptions": {
-      "target": "es5",
-      "module": "commonjs",
-      "noImplicitAny": true,
-      "removeComments": true,
-      "preserveConstEnums": true,
-      "esModuleInterop": true,
-      "sourceMap": true,
-      "rootDir": "src/",
-      "outDir": "var/build/"
+        "target": "es5",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "rootDir": "src/",
+        "outDir": "var/build/"
     }
 }
