@@ -12,9 +12,12 @@ function App() {
                 <Route path="/home">
                     <Home />
                 </Route>
+<<<<<<< HEAD
                 <Route path="/topic">
                     <Topic />
                 </Route>
+=======
+>>>>>>> 6a93b465e964a50a1fe611252190e049eaae971f
                 <Route path="/campfire">
                     <Campfire />
                 </Route>

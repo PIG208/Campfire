@@ -41,7 +41,7 @@ var request_1 = require("../core/request");
 var Service = (function () {
     function Service() {
     }
-    Service.getCampfire = function (topic) {
+    Service.getCampfire = function (topic, limit, random) {
         return __awaiter(this, void 0, void 0, function () {
             var result;
             return __generator(this, function (_a) {
@@ -51,6 +51,8 @@ var Service = (function () {
                             path: "/campfire",
                             query: {
                                 'topic': topic,
+                                'limit': limit,
+                                'random': random,
                             },
                         })];
                     case 1:

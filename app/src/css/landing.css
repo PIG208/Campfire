@@ -46,7 +46,7 @@ body {
     display: flex;
 }
 
-.加班 {
+.item-1 {
     color: #ff4500;
     position: absolute;
     top: 300px;
@@ -57,7 +57,7 @@ body {
     cursor: pointer;
 }
 
-.stressed {
+.item-2 {
     color: #ff4500;
     position: absolute;
     top: 280px;
@@ -67,7 +67,7 @@ body {
     font-family: Impact, fantasy;
     cursor: pointer;
 }
-.quarantined {
+.item-3 {
     color: #ff4500;
     position: absolute;
     top: 400px;

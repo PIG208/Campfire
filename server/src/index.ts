@@ -1,10 +1,17 @@
 import path from 'path';
+import cors from 'cors';
 import express, { Request, Response } from 'express';
 import { initialize } from 'express-openapi';
 import { PrismaClient } from '@prisma/client';
 
 const app = express();
 export const client = new PrismaClient();
+
+app.use(
+    cors({
+        origin: 'http://localhost:3000',
+    })
+);
 
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello world');
