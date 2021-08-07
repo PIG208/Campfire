@@ -99,7 +99,14 @@ paths:
                 - topic
       responses:
         200:
-          $ref: "#/components/responses/Default"
+          description: Return the created campfire
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  campfire:
+                    $ref: "#/components/schemas/Campfire"
 
   /campfire/{id}/participate:
     post:
@@ -135,8 +142,6 @@ paths:
                 properties:
                   comment:
                     $ref: "#/components/schemas/Comment"
-                required: 
-                  - comment
         403:
           description: The number of comments per campfire is limited to 1 each day
   /campfire/comment:

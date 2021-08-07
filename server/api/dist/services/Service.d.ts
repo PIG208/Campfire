@@ -7,13 +7,13 @@ export declare class Service {
     static postCampfire(requestBody: {
         topic: string;
     }): Promise<{
-        result?: 'success' | 'error';
+        campfire?: Campfire;
     }>;
     static postCampfireParticipate(id?: number): Promise<{
         result?: 'success' | 'error';
     }>;
     static getCampfireComment(id?: number): Promise<{
-        comment: Comment;
+        comment?: Comment;
     }>;
     static postCampfireComment(requestBody: {
         id: number;

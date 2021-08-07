@@ -22,5 +22,9 @@ export const post: Operation = (req, res) => {
         utils.success(res, {
             campfire: result,
         });
+    })
+    .catch((error)=>{
+        console.error(error);
+        utils.error(res, "Topic already exists", 400);
     });
 };

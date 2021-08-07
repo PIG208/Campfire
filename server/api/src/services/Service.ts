@@ -40,7 +40,7 @@ export class Service {
     /**
      * Add a new campfire
      * @param requestBody
-     * @returns any Response indicating whether the operation is a success
+     * @returns any Return the created campfire
      * @throws ApiError
      */
     public static async postCampfire(
@@ -48,7 +48,7 @@ export class Service {
             topic: string,
         },
     ): Promise<{
-        result?: 'success' | 'error',
+        campfire?: Campfire,
     }> {
         const result = await __request({
             method: 'POST',
@@ -85,7 +85,7 @@ export class Service {
     public static async getCampfireComment(
         id?: number,
     ): Promise<{
-        comment: Comment,
+        comment?: Comment,
     }> {
         const result = await __request({
             method: 'GET',
