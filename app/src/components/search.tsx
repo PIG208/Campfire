@@ -1,4 +1,4 @@
-import { Button, Form, Input, Select } from 'antd';
+import { Button, Form, Input } from 'antd';
 import { useState } from 'react';
 import { Campfire, Service } from 'campfire-api';
 import { useHistory } from 'react-router';
