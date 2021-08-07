@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import '../css/topic.css';
 import '../css/campfire.css';
+import Fire2 from '../components/fire-2';
 
 export default function Topic() {
     const [count, setCount] = useState(0);
@@ -39,25 +39,7 @@ export default function Topic() {
                                 <h1>人在emo </h1>
                                 <h1>{name}</h1>
                             </div>
-
-                            <div className="container">
-                                <div className="flame" id="flame-2"></div>
-                                <div className="flame" id="flame-1"></div>
-                                <div className="flame" id="flame-3"></div>
-                                <div
-                                    className="small-element"
-                                    id="small-element-1"
-                                ></div>
-                                <div
-                                    className="small-element"
-                                    id="small-element-2"
-                                ></div>
-                                <div className="fire-bottom">
-                                    <div className="main-fire"></div>
-                                </div>
-                                <div className="wood" id="wood-1"></div>
-                                <div className="wood" id="wood-2"></div>
-                            </div>
+                            <Fire2 />
                         </div>
                     ) : null}
                 </div>

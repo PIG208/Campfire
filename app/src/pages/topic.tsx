@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router';
 import { useState } from 'react';
 import '../css/topic.css';
+import Fire2 from '../components/fire-2';
 
 export default function Topic() {
     const [campfire, setCampfire] = useState<Campfire | undefined>();
@@ -58,18 +59,7 @@ export default function Topic() {
                 <button className="home">Home</button>
             </a>
 
-            <div className="container">
-                <div className="flame" id="flame-2"></div>
-                <div className="flame" id="flame-1"></div>
-                <div className="flame" id="flame-3"></div>
-                <div className="small-element" id="small-element-1"></div>
-                <div className="small-element" id="small-element-2"></div>
-                <div className="fire-bottom">
-                    <div className="main-fire"></div>
-                </div>
-                <div className="wood" id="wood-1"></div>
-                <div className="wood" id="wood-2"></div>
-            </div>
+            <Fire2 />
 
             <Modal
                 visible={visible}
