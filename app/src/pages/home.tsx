@@ -21,8 +21,6 @@ export default function Home() {
     const [topics, setTopics] = useState<Campfire[]>([]);
     const [trends, setTrends] = useState<Campfire[]>([]);
 
-    console.log(trends);
-
     useEffect(() => {
         // Attempt to play the audio
         try {
@@ -54,8 +52,8 @@ export default function Home() {
                     <h3 className="trending">Trending Emo 排行 </h3>
                     <div className="trendlist">
                         {trends.map((trend, index) => (
-                            <p>
-                                #{index + 1} {trend.topic} {trend.participants}
+                            <p key={index}>
+                                #{index + 1} <a href={`/topic/${trend.id}`}>{trend.topic} {trend.participants}</a>
                             </p>
                         ))}{' '}
                     </div>
@@ -84,6 +82,7 @@ export default function Home() {
                 <div className="topics">
                     {topics.map((val, index) => (
                         <FloatingTopic
+                            key={index}
                             topic={val.topic}
                             className={`item-${index + 1}`}
                             btnProps={{
