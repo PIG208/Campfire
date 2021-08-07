@@ -55,7 +55,7 @@ body {
     border-bottom: solid 1px red;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 420px) {
     .trending-container {
         right: 50%;
         transform: translateX(50%);
