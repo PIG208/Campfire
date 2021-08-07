@@ -9,11 +9,15 @@ export class Service {
     /**
      * Get all campfires
      * @param topic
+     * @param limit
+     * @param random
      * @returns any Success
      * @throws ApiError
      */
     public static async getCampfire(
         topic?: string,
+        limit?: number,
+        random?: boolean,
     ): Promise<{
         campfires?: Array<Campfire>,
     }> {
@@ -22,6 +26,8 @@ export class Service {
             path: `/campfire`,
             query: {
                 'topic': topic,
+                'limit': limit,
+                'random': random,
             },
         });
         return result.body;

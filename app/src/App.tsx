@@ -8,14 +8,14 @@ function App() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path='/home'>
+                <Route path="/home">
                     <Home />
                 </Route>
-                <Route path='/campfire'>
+                <Route path="/campfire">
                     <Campfire />
                 </Route>
-                <Route path='/'>
-                    <Redirect to='/home'/>
+                <Route path="/">
+                    <Redirect to="/home" />
                 </Route>
             </Switch>
         </BrowserRouter>

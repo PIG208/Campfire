@@ -53,6 +53,17 @@ paths:
           schema:
             type: string
             example: covid
+        - in: query
+          name: limit
+          schema:
+            description: The maximum number of results
+            type: number
+            example: 5
+        - in: query
+          name: random
+          schema:
+            description: Retrieve campfires randomly. This overrides topic
+            type: boolean
       responses:
         200:
           description: Success

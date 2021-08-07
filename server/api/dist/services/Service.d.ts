@@ -1,6 +1,6 @@
 import type { Campfire } from '../models/Campfire';
 export declare class Service {
-    static getCampfire(topic?: string): Promise<{
+    static getCampfire(topic?: string, limit?: number, random?: boolean): Promise<{
         campfires?: Array<Campfire>;
     }>;
     static postCampfire(requestBody: {
