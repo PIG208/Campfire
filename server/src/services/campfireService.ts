@@ -30,4 +30,12 @@ export const campfireService = {
             },
         });
     },
+    participate(campfireId: number, userId?: number) {
+        return client.participation.create({
+            data: {
+                campfire_id: campfireId,
+                user_id: userId,
+            },
+        });
+    },
 };
