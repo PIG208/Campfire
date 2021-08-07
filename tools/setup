@@ -24,6 +24,15 @@ cd ../server
 yarn install
 handle_error
 
+if [ -f .env ];
+then
+    echo '.env located. No need to create a new one'
+else
+    echo 'Please enter the connection string of your MySQL database'
+    read DB_URL
+    echo DATABASE_URL=$DB_URL > .env
+fi
+
 echo 'Use "cd app && yarn start" to  run the frontend'
 echo 'Use "cd server && yarn start" to run the backend'
 echo 'Or use "tools/run" to run them at the same time'
