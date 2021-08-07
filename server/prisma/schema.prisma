@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model campfire {
+  id            Int             @id @default(autoincrement())
+  topic         String          @unique @db.VarChar(255)
+  creator_id    Int?
+  user          user?           @relation(fields: [creator_id], references: [id])
+  comment       comment[]
+  participation participation[]
+
+  @@index([creator_id], name: "creator_id")
+}
+
+model comment {
+  id          Int      @id @default(autoincrement())
+  campfire_id Int
+  sender_id   Int?
+  content     String?  @db.Text
+  post_date   DateTime @default(dbgenerated("(utc_timestamp())")) @db.Timestamp(0)
+  campfire    campfire @relation(fields: [campfire_id], references: [id])
+  user        user?    @relation(fields: [sender_id], references: [id])
+
+  @@index([campfire_id], name: "campfire_id")
+  @@index([sender_id], name: "sender_id")
+}
+
+model participation {
+  id          Int      @id @default(autoincrement())
+  campfire_id Int
+  user_id     Int?
+  post_date   DateTime @default(dbgenerated("(utc_timestamp())")) @db.Timestamp(0)
+  campfire    campfire @relation(fields: [campfire_id], references: [id])
+  user        user?    @relation(fields: [user_id], references: [id])
+
+  @@index([campfire_id], name: "campfire_id")
+  @@index([user_id], name: "user_id")
+}
+
+model user {
+  id            Int             @id @default(autoincrement())
+  name          String          @unique @db.VarChar(255)
+  password_hash String          @db.Char(60)
+  campfire      campfire[]
+  comment       comment[]
+  participation participation[]
+}
