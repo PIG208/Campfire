@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import Fire from '../components/fire';
+import SlidingBg from '../components/sliding-bg';
 import '../css/landing.css';
 
 const audio = new Audio('/campfire.mp3');
@@ -33,7 +34,8 @@ export default function Home() {
     }, []); // eslint-disable-line
 
     return (
-        <div className='landing'>
+        <div className="landing">
+            <SlidingBg />
             <div className="landing-header">
                 <h1 className="brand">Campfire 篝火计划</h1>
                 <Link to="/campfire" className="start">
@@ -43,7 +45,7 @@ export default function Home() {
             </div>
 
             <Button
-                className='btn-random'
+                className="btn-random"
                 onClick={() => {
                     history.push('/topic');
                 }}

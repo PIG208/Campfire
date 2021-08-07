@@ -53,7 +53,7 @@ body {
 }
 
 .floating-topic {
-    color: #ff4500;
+    color: #ff4500aa;
     position: absolute;
     font-size: 2.5rem;
     text-decoration: none;
@@ -63,6 +63,15 @@ body {
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+}
+
+@media(max-width: 767px) {
+    .btn-random {
+        top: calc(10vh + 16rem);
+    }
+    .floating-topic {
+        font-size: 1.5rem;
+    }
 }
 
 .item-1 {
