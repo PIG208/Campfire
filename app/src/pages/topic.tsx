@@ -69,7 +69,7 @@ export default function Topic() {
 
             <Modal
                 visible={visible}
-                title='说点什么 Say something'
+                title="说点什么 Say something"
                 onCancel={() => setVisible(false)}
                 footer={null}
             >
@@ -79,15 +79,13 @@ export default function Topic() {
                         rules={[
                             {
                                 required: true,
-                                message: "请填写内容 Enter your message here"
-                            }
+                                message: '请填写内容 Enter your message here',
+                            },
                         ]}
                     >
                         <Input.TextArea rows={8} />
                     </Form.Item>
-                    <Button htmlType="submit">
-                        留言 Submit
-                    </Button>
+                    <Button htmlType="submit">留言 Submit</Button>
                 </Form>
             </Modal>
         </>
