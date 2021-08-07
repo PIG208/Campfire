@@ -4,6 +4,7 @@ import Topic from './pages/topic';
 import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
+import LookupPage from './pages/search';
 
 function App() {
     return (
@@ -17,6 +18,9 @@ function App() {
                 </Route>
                 <Route path="/campfire">
                     <Campfire />
+                </Route>
+                <Route path="/search">
+                    <LookupPage />
                 </Route>
                 <Route path="/">
                     <Redirect to="/home" />
