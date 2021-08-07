@@ -7,6 +7,11 @@ export default function Topic() {
     const [count, setCount] = useState(0);
     const [visible, setVisible] = useState(false);
 
+    const handleSubmit = (data: any) => {
+        setVisible(false);
+        console.log(data);
+    }
+
     /*
     Service.postCampfireParticipate(1).then(result=>{
 
