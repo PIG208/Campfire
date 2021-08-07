@@ -1,8 +1,9 @@
 .container {
+    position: absolute;
     width: 200px;
     height: 200px;
-    margin: 10px auto;
-    background: ;
+    left: 50%;
+    transform: translateX(-62%);
 }
 #flame-1 {
     height: 95px;
@@ -163,4 +164,11 @@
         left: 145px;
         transform: scale(0.1);
     }
+}
+.fire-topic {
+    position: relative;
+    font-size: 3rem;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
 }

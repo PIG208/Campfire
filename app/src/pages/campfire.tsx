@@ -2,10 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import '../css/campfire.css';
 import Fire2 from '../components/fire-2';
+import { Service } from 'campfire-api';
 
 export default function Topic() {
     const [count, setCount] = useState(0);
-    const [name, setName] = useState(null);
+    const [name, setName] = useState("");
     const [num, setNum] = useState(false);
 
     function getName(event: any) {
@@ -25,6 +26,11 @@ export default function Topic() {
                     onClick={() => {
                         setCount((count) => 1);
                         setNum((num) => true);
+                        Service.postCampfire({
+                            topic: name
+                        }).then((result)=>{
+                            setNum(result.result === 'success');
+                        });
                     }}
                 >
                     确认建立属于你的篝火
@@ -38,14 +44,13 @@ export default function Topic() {
                     {num ? (
                         <div>
                             <div className="msg">
-                                <h1>篝火已经成功建立了， 有</h1>
+                                <h1>篝火已经成功建立了，已经有</h1>
                                 <h1>{count}</h1>
                                 <h1>人在emo </h1>
-                                <h1>{name}</h1>
                             </div>
-                            <Fire2 />
                         </div>
                     ) : null}
+                    <Fire2 topic={name}/>
                 </div>
             </div>
         </>
