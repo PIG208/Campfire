@@ -10,7 +10,7 @@ const utils = {
     success(res: Response, data?: any) {
         res.json({
             result: 'success',
-            ...data
+            ...data,
         });
     },
     error(res: Response, reason: string, status: number = 400) {

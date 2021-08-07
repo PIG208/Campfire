@@ -10,54 +10,54 @@ export default function Fire() {
             width="1016px"
             height="493px"
             viewBox="0 0 1016 493"
-            enable-background="new 0 0 1016 493"
+            enableBackground="new 0 0 1016 493"
             xmlSpace="preserve"
         >
             <g>
                 <path
                     className="flame"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#F58553"
                     d="M260.138,279.034c0.329,2.103,0.929,3.955,3.466,1.591
                   c1.36-1.269,2.555-2.34,2.946-4.48c0.611-3.344,1.288-6.88,4.965-9.637C262.791,267.109,258.981,271.64,260.138,279.034z"
                 />
                 <path
                     className="flame one"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#F58553"
                     d="M642.133,261.121c-0.602,1.805,2.854,4.751,5.137,4.486
                   c2.775-0.322,5.049-1.429,4.986-4.831c-0.051-2.835-2.447-5.298-5.188-5.287C643.428,255.591,642.939,258.697,642.133,261.121z"
                 />
                 <path
                     className="flame two"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#F58553"
                     d="M236.169,192.895c2.469-0.638,4.981-0.998,4.781-3.98
                   c-0.117-1.744-0.676-3.642-3.098-3.758c-2.766-0.133-4.256,1.769-4.511,3.915C233.163,190.574,234.413,192.402,236.169,192.895z"
                 />
                 <path
                     className="flame"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#F58553"
                     d="M394.363,104.625c2.114,0.205,3.56-0.855,3.625-2.719
                   c0.057-1.631-1.206-2.715-3.106-2.809c-1.935-0.095-2.961,0.578-3.069,2.6C391.708,103.615,392.298,104.781,394.363,104.625z"
                 />
                 <path
                     className="flame one"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#F58553"
                     d="M257.108,216.734c1.575,0.05,2.945-0.246,2.794-2.009
                   c-0.133-1.558-1.21-2.582-2.89-2.516c-1.492,0.059-2.595,1.087-2.394,2.435C254.774,215.686,255.437,217.224,257.108,216.734z"
                 />
                 <path
                     className="flame two"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#F58553"
                     d="M73.648,152.806c1.225,0.057,1.942-0.5,2.374-1.896
                   c-0.912-0.418-0.55-1.965-2.227-2.114c-1.723-0.152-2.062,1.195-2.287,2.05C71.119,152.317,72.336,152.744,73.648,152.806z"
@@ -66,8 +66,8 @@ export default function Fire() {
             <g>
                 <path
                     className="flame one"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#DF513D"
                     d="M217.934,126.101c-1.167-3.763-2.061-7.788-5.236-11.302
                   c0.108,2.457-0.002,4.26-0.827,5.933c-0.684,1.387-0.368,3.43-2.745,3.684c-2.311,0.248-3.482-0.874-4.668-2.691
@@ -77,16 +77,16 @@ export default function Fire() {
                 />
                 <path
                     className="flame one"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#DF513D"
                     d="M537.457,199.138c-3.573,3.704-3.719,8.707-4.095,13.078
                   c-0.443,5.159,2.751,9.729,6.305,13.933c1.678-4.575,1.526-8.778-0.152-13.235C537.881,208.579,536.785,203.986,537.457,199.138z"
                 />
                 <path
                     className="flame two"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#DF513D"
                     d="M790.553,136.011c-1.086-0.688-1.059,0.386-1.111,0.802
                   c-0.26,2.063-1.121,4.191,0.15,6.185c2.043,3.204,3.762,6.5,3.252,11.266c3.506-3.165,4.613-6.646,4.301-10.125
@@ -94,16 +94,16 @@ export default function Fire() {
                 />
                 <path
                     className="flame one"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#DF513D"
                     d="M939.061,13.063c-2.963-0.039-4.814,2.08-4.898,5.601
                   c-0.365,3.134,2.238,3.978,4.217,4.556c2.504,0.733,5.953-2.514,5.951-5.005C944.33,15.513,941.861,13.101,939.061,13.063z"
                 />
                 <path
                     className="flame"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     fill="#DF513D"
                     d="M553.012,173.176c-5.986,4.961-6.033,6.817-1.004,11.31
                   C555.391,181.12,551.922,177.398,553.012,173.176z"
@@ -111,8 +111,8 @@ export default function Fire() {
             </g>
             <path
                 className="flame-main one"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 fill="#DF513D"
                 d="M855.631,466.945C944.262,471.891,972,449.18,972,449.18
               C1027,321.359,944.33,235,944.33,235c-25.416-5.286-45.699-63.5-49.117-88.546c-1.01-7.383,0.025-15.348,1.727-22.938
@@ -224,8 +224,8 @@ export default function Fire() {
             <path
                 className="flame-main three"
                 opacity="0.8"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 fill="#F58553"
                 d="M771.154,453.647c4.645,0,9.287-0.143,13.924-0.219
               c-25.818-16.325-17.105-41.962-15.551-65.757c-3.521,0.37-4.951,3.345-7.004,5.331c-9.867,9.548-14.1,23.04-21.363,34.415
@@ -258,8 +258,8 @@ export default function Fire() {
             <path
                 className="flame-main three"
                 opacity="0.8"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 fill="#F58553"
                 d="M956.425,464.105
               c-283.913,0.026-436.816-4.843-720.731-4.854c-5.471,0-10.94-0.17-16.414-0.259c17.521-8.644,29.516-19.407,35.464-33.646

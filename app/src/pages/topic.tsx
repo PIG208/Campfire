@@ -19,9 +19,12 @@ export default function Topic() {
                     <h1>人和你一样在emo同一件事</h1>
                 </div>
 
-                <button className="add" onClick={()=>{
-                    setCount(count=>count+1);
-                }}>
+                <button
+                    className="add"
+                    onClick={() => {
+                        setCount((count) => count + 1);
+                    }}
+                >
                     加柴
                 </button>
                 <div className="container">
