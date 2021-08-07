@@ -15,7 +15,6 @@
     border-radius: 8px;
     font-family: Impact, fantasy;
     position: absolute;
-    top: 500px;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -36,4 +35,16 @@
 }
 .add:hover {
     background-color: #ff0000;
+}
+
+@media(max-width: 767px){
+    .fire-topic {
+        font-size: 2.5rem;
+    }
+    .container {
+        margin-top: 100px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-62%);
+    }
 }
