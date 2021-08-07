@@ -15,13 +15,13 @@ initialize({
     apiDoc: './campfire.yml',
     paths: path.resolve(__dirname, 'paths'),
     consumesMiddleware: {
-        'application/json': express.json()
-    }
+        'application/json': express.json(),
+    },
 });
 
 app.use(((err, req, res, next) => {
     console.error(err);
-    res.status(500).send("Something went wrong...");
+    res.status(500).send('Something went wrong...');
 }) as express.ErrorRequestHandler);
 
 console.log('Start listening at 8080');

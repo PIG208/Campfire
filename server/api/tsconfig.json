@@ -7,8 +7,9 @@
         "preserveConstEnums": true,
         "esModuleInterop": true,
         "sourceMap": true,
+        "declaration": true,
         "rootDir": "src/",
-        "outDir": "var/build/"
+        "outDir": "dist/"
     },
     "include": ["src/**/*.ts"]
 }

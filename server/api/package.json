@@ -1,0 +1,13 @@
+{
+  "name": "campfire-api",
+  "version": "1.1.0",
+  "description": "The API generated from the OpenAPI documentation.",
+  "main": "dist/index.js",
+  "license": "Apache 2.0",
+  "scripts": {
+      "build": "tsc -b"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}
