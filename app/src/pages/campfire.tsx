@@ -15,7 +15,7 @@ export default function Topic() {
     return (
         <>
             <div>
-                <div className="title">
+                <div className="title2">
                     <h1>发起你自己的篝火吧, 请为它取一个名字</h1>
                     <input className="newfire" type="text" onChange={getName} />
                 </div>
@@ -29,6 +29,10 @@ export default function Topic() {
                 >
                     确认建立属于你的篝火
                 </button>
+
+                <a href="/home">
+                    <button className="home">Home</button>
+                </a>
 
                 <div>
                     {num ? (

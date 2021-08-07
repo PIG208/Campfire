@@ -6,8 +6,8 @@
     border-radius: 8px;
     font-family: Impact, fantasy;
     position: absolute;
-    top: 500px;
-    left: 700px;
+    top: 450px;
+    left: 550px;
     cursor: pointer;
     font-size: large;
 }
@@ -16,15 +16,23 @@
     display: flex;
     color: #ff4500;
     position: absolute;
-    left: 500px;
-    top: 160px;
+    left: 425px;
+    top: 180px;
 }
 
 .newfire {
     border: none;
     background-color: white;
     position: absolute;
-    left: 180px;
+    left: 150px;
     top: 65px;
     height: 30px;
+}
+
+.title2 {
+    display: flex;
+    color: #ff4500;
+    position: absolute;
+    left: 420px;
+    top: 70px;
 }
