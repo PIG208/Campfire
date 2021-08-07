@@ -8,8 +8,9 @@ export const trendService = {
     {
       // @ts-ignore
         return client.participation.groupBy({
-          by: ['campfire_id'], // @ts-ignore
-          _count: {
+          by: ['campfire_id'], 
+          _count: { // @ts-ignore
+            _all: true,
           },
           orderBy: { // @ts-ignore
             _count: {
