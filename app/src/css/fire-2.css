@@ -173,3 +173,15 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+@media (max-width: 767px) {
+    .fire-topic {
+        font-size: 2.5rem;
+    }
+    .container {
+        position: absolute;
+        left: 10%;
+        top: -18%;
+        transform: scale(2);
+    }
+}
