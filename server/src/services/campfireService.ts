@@ -1,11 +1,13 @@
 import { user } from '@prisma/client';
 import { client } from '..';
 
-const campfireService = {
+export const campfireService = {
     getCampfires(topic?: string) {
         return client.campfire.findMany({
             where: {
-                topic: topic,
+                topic: {
+                    contains: topic
+                },
             },
         });
     },
