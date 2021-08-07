@@ -51,25 +51,9 @@ body {
     display: flex;
 }
 
-.floating-topic {
-    color: #ff4500aa;
-    position: absolute;
-    font-size: 2.5rem;
-    text-decoration: none;
-    font-family: Impact, fantasy;
-    cursor: pointer;
-    animation-name: topicMovement;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-}
-
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .btn-random {
         top: calc(10vh + 16rem);
-    }
-    .floating-topic {
-        font-size: 1.5rem;
     }
 }
 
@@ -148,11 +132,6 @@ body {
 @keyframes flameMovement {
     50% {
         transform: scale(0.98, 1) translate(0, 2px) rotate(-1deg);
-    }
-}
-@keyframes topicMovement {
-    50% {
-        transform: scale(0.95, 1) translate(0, 15px) rotate(-1deg);
     }
 }
 @keyframes flameDisappear {

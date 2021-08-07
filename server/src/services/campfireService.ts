@@ -8,9 +8,11 @@ export const campfireService = {
         limit?: number,
         id?: number,
         random?: boolean
-    ): Promise<(campfire & {participants: number})[]> {
+    ): Promise<(campfire & { participants: number })[]> {
         if (random) {
-            return client.$queryRaw`SELECT campfire.*, IFNULL(t.c, 0) as participants FROM campfire LEFT OUTER JOIN (SELECT campfire_id, COUNT(*) as c FROM participation GROUP BY campfire_id)as t ON (t.campfire_id=campfire.id) ORDER BY rand() LIMIT ${limit ?? 1};`;
+            return client.$queryRaw`SELECT campfire.*, IFNULL(t.c, 0) as participants FROM campfire LEFT OUTER JOIN (SELECT campfire_id, COUNT(*) as c FROM participation GROUP BY campfire_id)as t ON (t.campfire_id=campfire.id) ORDER BY rand() LIMIT ${
+                limit ?? 1
+            };`;
         } else {
             return client.campfire
                 .findMany({
