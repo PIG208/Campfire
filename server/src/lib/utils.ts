@@ -19,6 +19,9 @@ const utils = {
             reason: reason,
         });
     },
+    undefinedIfNaN(n?: number) {
+        return isNaN(n) ? undefined : n;
+    },
 };
 
 export default utils;

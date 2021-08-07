@@ -8,5 +8,5 @@ export type Campfire = {
     /**
      * The total number of participants
      */
-    participants?: number;
+    participants: number;
 }

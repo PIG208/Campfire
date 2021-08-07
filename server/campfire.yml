@@ -21,6 +21,7 @@ components:
       required:
         - id
         - topic
+        - participants
     Comment:
       type: object
       properties:
