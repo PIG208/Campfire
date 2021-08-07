@@ -18,13 +18,15 @@ export const get: Operation = (req, res) => {
 export const post: Operation = (req, res) => {
     const data = utils.extractBody(req, Service.postCampfire);
 
-    campfireService.addCampfire(data.topic).then((result) => {
-        utils.success(res, {
-            campfire: result,
+    campfireService
+        .addCampfire(data.topic)
+        .then((result) => {
+            utils.success(res, {
+                campfire: result,
+            });
+        })
+        .catch((error) => {
+            console.error(error);
+            utils.error(res, 'Topic already exists', 400);
         });
-    })
-    .catch((error)=>{
-        console.error(error);
-        utils.error(res, "Topic already exists", 400);
-    });
 };

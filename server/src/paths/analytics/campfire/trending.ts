@@ -8,10 +8,12 @@ export const get: Operation = (req, res) => {
         if (result.length > 0) {
             Promise.all(
                 (result as any).map((value: any) => {
-                    return campfireService.getCampfires(undefined, 1, value.campfire_id).then(result=>result[0]);
+                    return campfireService
+                        .getCampfires(undefined, 1, value.campfire_id)
+                        .then((result) => result[0]);
                 })
             ).then((data) => {
-                console.log(data)
+                console.log(data);
                 utils.success(res, {
                     campfires: data,
                 });

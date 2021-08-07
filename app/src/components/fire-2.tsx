@@ -1,12 +1,10 @@
 import '../css/fire-2.css';
 import FloatingTopic from './floating-topic';
 
-export default function Fire2({topic}: {topic?: string}) {
+export default function Fire2({ topic }: { topic?: string }) {
     return (
         <div className="container">
-            {topic &&
-                <FloatingTopic topic={topic} className="fire-topic"/>
-            }
+            {topic && <FloatingTopic topic={topic} className="fire-topic" />}
             <div className="flame" id="flame-2"></div>
             <div className="flame" id="flame-1"></div>
             <div className="flame" id="flame-3"></div>
