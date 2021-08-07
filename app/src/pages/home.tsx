@@ -16,6 +16,9 @@ export default function Home() {
 
     return (
         <>
+            <audio autoPlay>
+                <source src='../assets/campfire.mp3' type="audio/mpeg"></source>
+            </audio>
             <iframe
                 title="repeater"
                 style={{ display: 'none' }}
@@ -37,7 +40,7 @@ export default function Home() {
             <button className="button random">Random 随机Emo</button>
             <div className="topics">
                 {topics.map((val, index) => (
-                    <a href="" className={`item-${index + 1}`}>
+                    <a key={index} href="#" className={`item-${index + 1}`}>
                         {val.topic}
                     </a>
                 ))}
