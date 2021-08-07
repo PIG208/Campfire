@@ -2,43 +2,49 @@ body {
     background: #fff8dc;
 }
 
-.name {
-    color: #ff4500;
+.landing {
     font-family: Impact, fantasy;
+}
+
+.landing-header {
+    padding: 1rem;
+}
+
+.brand {
+    color: #ff4500;
     position: absolute;
 }
 
 .start {
+    font-size: 2rem;
     color: #ff4500;
-    font-family: Impact, fantasy;
     text-decoration: none;
     position: absolute;
-    left: 600px;
-    top: 100px;
+    top: calc(10vh + 4rem);
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 .trending {
     color: #ff4500;
-    font-family: Impact, fantasy;
     text-decoration: none;
     position: absolute;
-    left: 1200px;
+    right: 5%;
 }
-.button {
+
+.btn-random {
     color: white;
     border: none;
-    padding: 10px 20px;
     border-radius: 8px;
-    font-family: Impact, fantasy;
     position: absolute;
-    top: 500px;
-    left: 50px;
-    cursor: pointer;
-    font-size: large;
-}
-.random {
     background-color: #ff4500;
+    top: calc(10vh + 8rem);
+    left: 50%;
+    transform: translateX(-50%);
 }
-.random:hover {
+
+.btn-random:hover {
+    color: pink;
     background-color: #ff0000;
 }
 
@@ -46,57 +52,47 @@ body {
     display: flex;
 }
 
-.item-1 {
+.floating-topic {
     color: #ff4500;
     position: absolute;
-    top: 300px;
-    left: 300px;
-    font-size: 20px;
+    font-size: 2.5rem;
     text-decoration: none;
     font-family: Impact, fantasy;
     cursor: pointer;
+    animation-name: topicMovement;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.item-1 {
+    bottom: 90%;
+    left: 10%;
 }
 
 .item-2 {
-    color: #ff4500;
-    position: absolute;
-    top: 280px;
-    left: 1000px;
-    font-size: 20px;
-    text-decoration: none;
-    font-family: Impact, fantasy;
-    cursor: pointer;
+    bottom: 75%;
+    left: 40%;
 }
+
 .item-3 {
-    color: #ff4500;
-    position: absolute;
-    top: 400px;
-    left: 600px;
-    font-size: 20px;
-    text-decoration: none;
-    font-family: Impact, fantasy;
-    cursor: pointer;
+    bottom: 100%;
+    left: 80%;
 }
 
 .mo-fire {
-    height: auto;
+    width: 100%;
+    max-height: 60vh;
     position: fixed;
-    left: 20%;
     bottom: -50px;
-    z-index: 4;
-}
-
-#svg-view {
-    width: 252px;
-    height: 125px;
-    left: 0px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .mo-fire svg {
     width: 100%;
     height: auto;
     position: relative;
-    right: 40px;
 }
 .flame {
     animation-name: flameDisappear;
@@ -144,6 +140,11 @@ body {
 @keyframes flameMovement {
     50% {
         transform: scale(0.98, 1) translate(0, 2px) rotate(-1deg);
+    }
+}
+@keyframes topicMovement {
+    50% {
+        transform: scale(0.95, 1) translate(0, 15px) rotate(-1deg);
     }
 }
 @keyframes flameDisappear {
