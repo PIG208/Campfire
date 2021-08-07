@@ -14,13 +14,19 @@ handle_error() {
 
 }
 
+cd server/api
+yarn link
+cd ../../
+
 echo "Installing frontend dependencies"
 cd app
+yarn link campfire-api
 yarn install
 handle_error
 
 echo "Installing backend dependencies"
 cd ../server
+yarn link campfire-api
 yarn install
 handle_error
 
