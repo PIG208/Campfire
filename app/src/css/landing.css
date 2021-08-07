@@ -32,6 +32,14 @@ body {
     right: 5%;
 }
 
+.trendlist {
+    color: #ff4500;
+    text-decoration: none;
+    position: absolute;
+    top: 3rem;
+    right: 9%;
+}
+
 .btn-random {
     color: white;
     border: none;
@@ -146,3 +154,4 @@ body {
         opacity: 0;
     }
 }
+

@@ -19,14 +19,8 @@ window.onclick = () => {
 export default function Home() {
     const history = useHistory();
     const [topics, setTopics] = useState<Campfire[]>([]);
-    const [trends, setTrends] = useState<Campfire | undefined>();
+    const [trends, setTrends] = useState<Campfire[]>([]);
 
-    Service.getCampfireTrending(3).then(
-        (result) => {
-            if (result.campfires) {
-                setTrends(result.campfires[0]);
-            }
-        });
     
     console.log(trends);
 
@@ -37,6 +31,12 @@ export default function Home() {
                 audio.play();
             }
         } catch {}
+        Service.getCampfireTrending(3).then(
+            (result) => {
+            if (result.campfires) {
+                setTrends(result.campfires);
+            }
+        });
 
         // Fetch the top 3 topics
         Service.getCampfire(undefined, 3, true).then((result) => {
@@ -53,7 +53,9 @@ export default function Home() {
                     Start Your Own Fire 自己生火
                 </Link>
                 <h3 className="trending">Trending Emo 排行 </h3>
-                <h3 className="trending">{trends} </h3>
+                <div className="trendlist">{trends.map((trend, index)=>
+                    <p>#{index + 1} {trend.topic} {trend.participants}</p>
+                )} </div>
             </div>
 
             <Button
