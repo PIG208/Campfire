@@ -8,7 +8,7 @@ export default function Search() {
     const [name, setName] = useState('');
     const [data, setData] = useState<Campfire[]>([]);
 
-    const handleSearch = (data: {query: string}) => {
+    const handleSearch = (data: { query: string }) => {
         Service.getCampfire(name, 5).then((result) => {
             setData(result.campfires ?? []);
         });
@@ -19,29 +19,26 @@ export default function Search() {
     };
 
     return (
-        <Form
-            onFinish={handleSearch}
-            layout='vertical'
-        >
+        <Form onFinish={handleSearch} layout="vertical">
             <Form.Item
                 label="在这里搜索你想找到的篝火 Looking for a campfire? Search here"
                 name="query"
                 style={{
-                    fontFamily: 'Impact, fantasy'
+                    fontFamily: 'Impact, fantasy',
                 }}
             >
                 <Input
-                    className='search-input'
+                    className="search-input"
                     value={name}
                     onChange={(e) => handleChange(e.target.value)}
                 ></Input>
 
                 {data.map((value, index) => (
                     <Button
-                        className='btn-common'
-                        style={{position: 'relative', margin: '0.5rem 0'}}
+                        className="btn-common"
+                        style={{ position: 'relative', margin: '0.5rem 0' }}
                         key={value.id}
-                        onClick={()=>history.push(`/topic/${value.id}`)}
+                        onClick={() => history.push(`/topic/${value.id}`)}
                         block
                     >
                         {value.topic}

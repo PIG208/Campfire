@@ -16,5 +16,5 @@
 .home:hover {
     background-color: #fff;
     color: #5555ff;
-    transition: all ease .3s;
+    transition: all ease 0.3s;
 }

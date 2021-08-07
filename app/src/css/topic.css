@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
 }
-@media(max-width: 424) {
+@media (max-width: 424) {
     .title > h {
         font-size: 1.5rem;
     }

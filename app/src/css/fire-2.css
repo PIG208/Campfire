@@ -169,7 +169,7 @@
 .fire-topic {
     position: relative;
     font-size: 3rem;
-    top: 120px;
+    top: 140px;
     left: 50%;
     transform: translateX(-50%);
 }
