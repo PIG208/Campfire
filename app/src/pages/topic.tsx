@@ -7,6 +7,7 @@ import { useState } from 'react';
 import '../css/topic.css';
 import Fire2 from '../components/fire-2';
 import SlidingBg from '../components/sliding-bg';
+import HomeBtn from '../components/home-btn';
 
 export default function Topic() {
     const history = useHistory();
@@ -104,9 +105,7 @@ export default function Topic() {
             >
                 抽取 {topic} 下的留言
             </button>
-            <a href="/home">
-                <button className="home">Home</button>
-            </a>
+            <HomeBtn />
 
             <Fire2 topic={topic} />
 

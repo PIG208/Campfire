@@ -1,0 +1,12 @@
+.home {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: Impact, fantasy;
+    position: absolute;
+    margin: 1rem;
+    cursor: pointer;
+    font-size: large;
+}

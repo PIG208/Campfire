@@ -1,8 +1,9 @@
 import Fire2 from '../components/fire-2';
+import HomeBtn from '../components/home-btn';
 import React from 'react';
+import { Campfire, Service } from 'campfire-api';
 import { Form, Input, notification } from 'antd';
 import { useHistory } from 'react-router-dom';
-import { Campfire, Service } from 'campfire-api';
 import { useState } from 'react';
 import '../css/campfire.css';
 
@@ -68,9 +69,7 @@ export default function Topic() {
                     </Form>
                 </div>
 
-                <a href="/home">
-                    <button className="home">Home</button>
-                </a>
+                <HomeBtn />
                 {campfire && (
                     <button
                         className="create"
