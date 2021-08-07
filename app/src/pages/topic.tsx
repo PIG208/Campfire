@@ -31,7 +31,7 @@ export default function Topic() {
                     setVisible(true);
                 }}
             >
-                加柴
+                加柴 Join in 
             </button>
             <div className="container">
                 <div className="flame" id="flame-2"></div>
@@ -48,7 +48,7 @@ export default function Topic() {
 
             <Modal
                 visible={visible}
-                title='说点什么'
+                title='说点什么 Say something'
                 onCancel={() => setVisible(false)}
                 footer={null}
             >
@@ -60,14 +60,14 @@ export default function Topic() {
                         rules={[
                             {
                                 required: true,
-                                message: "请填写内容"
+                                message: "请填写内容 Enter your message here"
                             }
                         ]}
                     >
                         <Input.TextArea rows={8} />
                     </Form.Item>
                     <Button htmlType="submit">
-                        留言
+                        留言 Submit
                     </Button>
                 </Form>
             </Modal>
