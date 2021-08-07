@@ -2,8 +2,9 @@
     display: flex;
     color: #ff4500;
     position: absolute;
-    left: 500px;
+    left: 50%;
     top: 50px;
+    transform: translateX(-50%);
 }
 
 .add {
@@ -15,7 +16,8 @@
     font-family: Impact, fantasy;
     position: absolute;
     top: 500px;
-    left: 700px;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
     font-size: large;
 }

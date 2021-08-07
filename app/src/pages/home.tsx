@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import Fire from '../components/fire';
+import FloatingTopic from '../components/floating-topic';
 import SlidingBg from '../components/sliding-bg';
 import '../css/landing.css';
 
@@ -57,13 +58,15 @@ export default function Home() {
                 <Fire />
                 <div className="topics">
                     {topics.map((val, index) => (
-                        <Link
-                            key={index}
-                            to={`/topic/${val.id}`}
-                            className={`floating-topic item-${index + 1}`}
-                        >
-                            {val.topic}
-                        </Link>
+                        <FloatingTopic
+                            topic={val.topic}
+                            className={`item-${index + 1}`}
+                            btnProps={{
+                                onClick: () => {
+                                    history.push(`/topic/${val.id}`)
+                                }
+                            }}
+                        />
                     ))}
                 </div>
             </div>
