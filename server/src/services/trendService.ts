@@ -2,7 +2,7 @@ import { participation } from '@prisma/client';
 import { client } from '..';
 
 
-export const trendingService = {
+export const trendService = {
 
     giveTrend()
     {

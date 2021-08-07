@@ -19,6 +19,16 @@ window.onclick = () => {
 export default function Home() {
     const history = useHistory();
     const [topics, setTopics] = useState<Campfire[]>([]);
+    const [trends, setTrends] = useState<Campfire | undefined>();
+
+    Service.getCampfireTrending(3).then(
+        (result) => {
+            if (result.campfires) {
+                setTrends(result.campfires[0]);
+            }
+        });
+    
+    console.log(trends);
 
     useEffect(() => {
         // Attempt to play the audio
@@ -42,7 +52,8 @@ export default function Home() {
                 <Link to="/campfire" className="start">
                     Start Your Own Fire 自己生火
                 </Link>
-                <h3 className="trending">Trending Emo 排行</h3>
+                <h3 className="trending">Trending Emo 排行 </h3>
+                <h3 className="trending">{trends} </h3>
             </div>
 
             <Button
