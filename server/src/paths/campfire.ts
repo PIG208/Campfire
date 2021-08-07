@@ -4,10 +4,10 @@ import utils from '../lib/utils';
 import { campfireService } from '../services/campfireService';
 
 export const get: Operation = (req, res) => {
-    const { topic, limit, random } = req.query as any;
+    const { topic, limit, random, id } = req.query as any;
 
     campfireService
-        .getCampfires(topic, parseInt(limit), Boolean(random))
+        .getCampfires(topic, parseInt(limit), parseInt(id), Boolean(random))
         .then((result) => {
             utils.success(res, {
                 campfires: result,

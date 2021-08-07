@@ -64,6 +64,11 @@ paths:
           schema:
             description: Retrieve campfires randomly. This overrides topic
             type: boolean
+        - in: query
+          name: id
+          schema:
+            description: The id of the campfire
+            type: number
       responses:
         200:
           description: Success

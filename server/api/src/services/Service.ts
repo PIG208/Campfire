@@ -11,6 +11,7 @@ export class Service {
      * @param topic
      * @param limit
      * @param random
+     * @param id
      * @returns any Success
      * @throws ApiError
      */
@@ -18,6 +19,7 @@ export class Service {
         topic?: string,
         limit?: number,
         random?: boolean,
+        id?: number,
     ): Promise<{
         campfires?: Array<Campfire>,
     }> {
@@ -28,6 +30,7 @@ export class Service {
                 'topic': topic,
                 'limit': limit,
                 'random': random,
+                'id': id,
             },
         });
         return result.body;

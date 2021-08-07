@@ -2,7 +2,12 @@ import { user } from '@prisma/client';
 import { client } from '..';
 
 export const campfireService = {
-    getCampfires(topic?: string, limit?: number, random: boolean = false) {
+    getCampfires(
+        topic?: string,
+        limit?: number,
+        id?: number,
+        random: boolean = false
+    ) {
         if (random) {
             return client.$queryRaw`SELECT * FROM campfire ORDER BY rand() LIMIT ${limit}`;
         } else {
@@ -11,6 +16,7 @@ export const campfireService = {
                     topic: {
                         contains: topic,
                     },
+                    id: id,
                 },
                 take: !isNaN(limit) ? limit : undefined,
             });

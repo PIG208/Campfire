@@ -1,37 +1,58 @@
-import React from 'react';
-import { Button, Form, Input, Modal } from 'antd';
+import React, { useCallback } from 'react';
+import { Button, Form, Input, Modal, notification } from 'antd';
+import { Campfire, Service } from 'campfire-api';
+import { useEffect } from 'react';
+import { useParams } from 'react-router';
 import { useState } from 'react';
 import '../css/topic.css';
 
 export default function Topic() {
-    const [count, setCount] = useState(0);
+    const [campfire, setCampfire] = useState<Campfire | undefined>();
     const [visible, setVisible] = useState(false);
+    const id = parseInt(useParams<{ id: string }>().id);
+
+    const update = useCallback(() => {
+        const random = id === undefined || isNaN(id);
+        Service.getCampfire(undefined, 1, random, random ? undefined : id).then(
+            (result) => {
+                if (result.campfires) {
+                    setCampfire(result.campfires[0]);
+                }
+            }
+        );
+    }, [id]);
 
     const handleSubmit = (data: any) => {
         setVisible(false);
-        console.log(data);
-    }
+    };
 
-    /*
-    Service.postCampfireParticipate(1).then(result=>{
+    const handleAdd = () => {
+        let target = id;
+        if (isNaN(target) && campfire) target = campfire.id;
+        Service.postCampfireParticipate(target).then((result) => {
+            if (result.result === 'success') {
+                setVisible(true);
+                notification.success({
+                    message: '成功',
+                    description: '加柴成功',
+                });
+                update();
+            }
+        });
+    };
 
-    });*/
+    useEffect(() => {
+        update();
+    }, [update]);
 
     return (
         <>
             <div className="title">
-                <h1>今天有</h1>
-                <h1>{count}</h1>
-                <h1>人和你一样在emo同一件事</h1>
+                <h1>今天有{campfire?.participants}人</h1>
+                <h1>和你一样在emo {campfire?.topic}</h1>
             </div>
-            <button
-                className="add"
-                onClick={() => {
-                    setCount((count) => count + 1);
-                    setVisible(true);
-                }}
-            >
-                加柴 Join in 
+            <button className="add" onClick={handleAdd}>
+                加柴 Join in
             </button>
             <div className="container">
                 <div className="flame" id="flame-2"></div>
@@ -52,11 +73,9 @@ export default function Topic() {
                 onCancel={() => setVisible(false)}
                 footer={null}
             >
-                <Form
-                    layout='vertical'
-                >
+                <Form onFinish={handleSubmit} layout="vertical">
                     <Form.Item
-                        name='content'
+                        name="content"
                         rules={[
                             {
                                 required: true,

@@ -12,7 +12,7 @@ function App() {
                 <Route path="/home">
                     <Home />
                 </Route>
-                <Route path="/topic">
+                <Route path="/topic/:id?">
                     <Topic />
                 </Route>
                 <Route path="/campfire">
