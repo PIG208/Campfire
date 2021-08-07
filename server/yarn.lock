@@ -49,6 +49,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/cors@^2.8.12":
+  version "2.8.12"
+  resolved "https://registry.nlark.com/@types/cors/download/@types/cors-2.8.12.tgz?cache=0&sync_timestamp=1625816639966&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fcors%2Fdownload%2F%40types%2Fcors-2.8.12.tgz#6b2c510a7ad7039e98e7b8d3d6598f4359e5c080"
+  integrity sha1-ayxRCnrXA56Y57jT1lmPQ1nlwIA=
+
 "@types/express-openapi@^1.9.0":
   version "1.9.0"
   resolved "https://registry.nlark.com/@types/express-openapi/download/@types/express-openapi-1.9.0.tgz#c2ed167d3982c252a58b5a6a7c49eed493454c00"
