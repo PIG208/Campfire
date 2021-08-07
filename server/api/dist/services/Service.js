@@ -115,14 +115,14 @@ var Service = (function () {
             });
         });
     };
-    Service.postCampfireComment = function (requestBody, id) {
+    Service.postCampfireComment = function (requestBody) {
         return __awaiter(this, void 0, void 0, function () {
             var result;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4, request_1.request({
                             method: 'POST',
-                            path: "/campfire/" + id + "/comment",
+                            path: "/campfire/comment",
                             body: requestBody,
                         })];
                     case 1:

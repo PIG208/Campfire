@@ -2,6 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { Campfire } from '../models/Campfire';
+import type { Comment } from '../models/Comment';
 import { request as __request } from '../core/request';
 
 export class Service {
@@ -84,7 +85,7 @@ export class Service {
     public static async getCampfireComment(
         id?: number,
     ): Promise<{
-        comment: Campfire,
+        comment: Comment,
     }> {
         const result = await __request({
             method: 'GET',
@@ -99,24 +100,26 @@ export class Service {
     /**
      * Leave a comment for a campfire
      * @param requestBody
-     * @param id
      * @returns any Response indicating whether the operation is a success
      * @throws ApiError
      */
     public static async postCampfireComment(
         requestBody: {
             /**
+             * The id of the campfire
+             */
+            id: number,
+            /**
              * The content of the comment
              */
-            content?: string,
+            content: string,
         },
-        id?: number,
     ): Promise<{
         result?: 'success' | 'error',
     }> {
         const result = await __request({
             method: 'POST',
-            path: `/campfire/${id}/comment`,
+            path: `/campfire/comment`,
             body: requestBody,
         });
         return result.body;

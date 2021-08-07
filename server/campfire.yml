@@ -134,20 +134,15 @@ paths:
                 type: object
                 properties:
                   comment:
-                    $ref: "#/components/schemas/Campfire"
+                    $ref: "#/components/schemas/Comment"
                 required: 
                   - comment
         403:
           description: The number of comments per campfire is limited to 1 each day
+  /campfire/comment:
     post:
       operationId: postCampfireComment
       description: Leave a comment for a campfire
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: number
-            description: The id of the campfire
       requestBody:
         required: true
         content:
@@ -155,9 +150,15 @@ paths:
             schema:
               type: object
               properties:
+                id:
+                  type: number
+                  description: The id of the campfire
                 content:
                   type: string
                   description: The content of the comment
+              required:
+                - id
+                - content
       responses:
         200:
           $ref: "#/components/responses/Default"

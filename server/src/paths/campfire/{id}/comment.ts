@@ -7,20 +7,12 @@ export const get: Operation = (req, res) => {
     const id = parseInt(req.params['id']);
 
     commentService.pickComment(id).then((result) => {
-        utils.success(res, {
-            id: result.id,
-            content: result.content,
-        } as Comment);
-    });
-};
-
-export const post: Operation = (req, res) => {
-    const id = parseInt(req.params['id']);
-    const { content } = utils.extractBody(req, Service.postCampfireComment);
-
-    commentService.addComment(id, content).then((result) => {
-        utils.success(res, {
-            result: 'success',
-        });
+        if (result.length > 0) {
+            utils.success(res, {
+                comment: { id: result[0].id, content: result[0].content },
+            });
+        } else {
+            utils.error(res, 'No comments', 200);
+        }
     });
 };
