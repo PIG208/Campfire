@@ -1,11 +1,24 @@
+import { Campfire, Service } from 'campfire-api';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import Fire from '../components/fire';
 import '../css/landing.css';
 
 export default function Home() {
+    const [topics, setTopics] = useState<Campfire[]>([]);
+
+    useEffect(() => {
+        // Fetch the top 3 topics
+        Service.getCampfire(undefined, 3, true).then((result) => {
+            setTopics(result.campfires ?? []);
+        });
+    }, []); // eslint-disable-line
+
     return (
         <>
             <iframe
-                style={{ display: 'none;' }}
+                title="repeater"
+                style={{ display: 'none' }}
                 width="560"
                 height="315"
                 src="https://www.youtuberepeater.com/watch?v=qsOUv9EzKsg#gsc.tab=0"
@@ -23,19 +36,15 @@ export default function Home() {
 
             <button className="button random">Random 随机Emo</button>
             <div className="topics">
-                <a href="" className="加班">
-                    996
-                </a>
-                <a href="" className="quarantined">
-                    Quarantined
-                </a>
-                <a href="" className="stressed">
-                    Stressed out of nowhere
-                </a>
+                {topics.map((val, index) => (
+                    <a href="" className={`item-${index + 1}`}>
+                        {val.topic}
+                    </a>
+                ))}
             </div>
 
             <div className="mo-fire">
-                <Fire/>
+                <Fire />
             </div>
         </>
     );
