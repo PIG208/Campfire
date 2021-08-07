@@ -4,6 +4,7 @@
     height: 200px;
     left: 50%;
     transform: translateX(-62%);
+    z-index: -1;
 }
 #flame-1 {
     height: 95px;

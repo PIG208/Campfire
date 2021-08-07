@@ -6,6 +6,7 @@ import { useParams } from 'react-router';
 import { useState } from 'react';
 import '../css/topic.css';
 import Fire2 from '../components/fire-2';
+import SlidingBg from '../components/sliding-bg';
 
 export default function Topic() {
     const [campfire, setCampfire] = useState<Campfire | undefined>();
@@ -62,9 +63,12 @@ export default function Topic() {
         let target = id;
         if (isNaN(target) && campfire) target = campfire.id;
         Service.getCampfireComment(target).then((result) => {
-            setMsgVisible(true);
             if(result.comment){
+                setMsgVisible(true);
                 setComment(result.comment.content);
+            }
+            else {
+                
             }
         });
     }
@@ -79,6 +83,7 @@ export default function Topic() {
                 <h1>今天有{campfire?.participants}人</h1>
                 <h1>和你一样在emo</h1>
             </div>
+            <SlidingBg/>
             <button className="add" onClick={handleAdd} style={{top: '60vh'}}>
                 加柴 Join in
             </button>
