@@ -1,5 +1,4 @@
-
-import fire from '../components/fire.svg';
+import Fire from '../components/fire';
 import '../css/landing.css';
 
 export default function Home() {
@@ -36,7 +35,7 @@ export default function Home() {
             </div>
 
             <div className="mo-fire">
-                <img src={fire} alt="Burning campfire" />
+                <Fire/>
             </div>
         </>
     );
