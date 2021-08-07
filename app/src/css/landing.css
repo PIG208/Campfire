@@ -58,19 +58,26 @@ body {
     }
 }
 
-.btn-random {
+.btn-common {
     color: white;
     border: none;
     border-radius: 8px;
     position: absolute;
     background-color: #ff4500;
-    top: calc(10vh + 11rem);
     left: 50%;
     transform: translateX(-50%);
 }
 
-.btn-random:hover {
+.btn-common:hover {
     background-color: #ffffff;
+}
+
+.btn-random {
+    top: calc(10vh + 11rem);
+}
+
+.btn-search {
+    top: calc(10vh + 20rem);
 }
 
 .topics {

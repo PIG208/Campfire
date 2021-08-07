@@ -63,12 +63,20 @@ export default function Home() {
             </div>
 
             <Button
-                className="btn-random"
+                className="btn-common btn-random"
                 onClick={() => {
                     history.push('/topic');
                 }}
             >
                 Random 随机Emo
+            </Button>
+            <Button
+                className="btn-common btn-search"
+                onClick={() => {
+                    history.push('/search');
+                }}
+            >
+                Search 搜索
             </Button>
 
             <div className="mo-fire">
