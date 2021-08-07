@@ -45,6 +45,7 @@ export default function Topic() {
                     }`}
                 >
                     <Form onFinish={handleSubmit} layout="vertical">
+                        <p>「篝火计划 Campfire」是一个树洞，让有着相似不幸的人们联结在一起，围着篝火抱团取暖。</p>
                         <Form.Item
                             label="发起你自己的篝火吧, 请为它取一个名字"
                             name="name"
@@ -57,14 +58,16 @@ export default function Topic() {
                         >
                             <Input
                                 className="newfire"
-                                placeholder="你遇到的，以及他人可能遇到的困难"
+                                placeholder="你的，或他人的困难"
                                 onChange={handleChange}
                             />
                         </Form.Item>
                         <button className="create" type="submit">
                             确认建立
                             <br />
-                            属于你的篝火
+                            属于你
+                            <br />
+                            和所有人的篝火
                         </button>
                     </Form>
                 </div>
