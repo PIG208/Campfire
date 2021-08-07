@@ -6,7 +6,15 @@
     border-radius: 8px;
     font-family: Impact, fantasy;
     position: absolute;
+    left: 1rem;
+    top: 1rem;
     margin: 1rem;
     cursor: pointer;
     font-size: large;
+}
+
+.home:hover {
+    background-color: #fff;
+    color: #5555ff;
+    transition: all ease .3s;
 }
