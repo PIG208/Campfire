@@ -16,8 +16,6 @@ export default function Home() {
 
     return (
         <>
-<<<<<<< HEAD
-=======
             <iframe
                 title="repeater"
                 style={{ display: 'none' }}
@@ -28,7 +26,6 @@ export default function Home() {
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
             ></iframe>
->>>>>>> 6a93b465e964a50a1fe611252190e049eaae971f
             <div className="header">
                 <h1 className="name">Campfire 篝火计划</h1>
                 <a href="" className="start">
@@ -39,24 +36,11 @@ export default function Home() {
 
             <button className="button random">Random 随机Emo</button>
             <div className="topics">
-<<<<<<< HEAD
-                <a href="/pages/topic.tsx" className="加班">
-                    996
-                </a>
-
-                <a href="" className="quarantined">
-                    Quarantined
-                </a>
-                <a href="" className="stressed">
-                    Stressed out of nowhere
-                </a>
-=======
                 {topics.map((val, index) => (
                     <a href="" className={`item-${index + 1}`}>
                         {val.topic}
                     </a>
                 ))}
->>>>>>> 6a93b465e964a50a1fe611252190e049eaae971f
             </div>
 
             <div className="mo-fire">
