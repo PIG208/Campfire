@@ -27,10 +27,12 @@ handle_error
 if [ -f .env ];
 then
     echo '.env located. No need to create a new one'
+    yarn migrate
 else
     echo 'Please enter the connection string of your MySQL database'
     read DB_URL
     echo DATABASE_URL=$DB_URL > .env
+    yarn migrate
 fi
 
 echo 'Use "cd app && yarn start" to  run the frontend'
