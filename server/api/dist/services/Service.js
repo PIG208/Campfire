@@ -41,7 +41,7 @@ var request_1 = require("../core/request");
 var Service = (function () {
     function Service() {
     }
-    Service.getCampfire = function (topic, limit, random) {
+    Service.getCampfire = function (topic, limit, random, id) {
         return __awaiter(this, void 0, void 0, function () {
             var result;
             return __generator(this, function (_a) {
@@ -53,6 +53,7 @@ var Service = (function () {
                                 'topic': topic,
                                 'limit': limit,
                                 'random': random,
+                                'id': id,
                             },
                         })];
                     case 1:
