@@ -54,6 +54,10 @@ export default function Topic() {
             <button className="add" onClick={handleAdd}>
                 加柴 Join in
             </button>
+            <a href="/home">
+                <button className="home">Home</button>
+            </a>
+
             <div className="container">
                 <div className="flame" id="flame-2"></div>
                 <div className="flame" id="flame-1"></div>

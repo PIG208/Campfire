@@ -19,7 +19,23 @@
     cursor: pointer;
     font-size: large;
 }
+.home {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: Impact, fantasy;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    cursor: pointer;
+    font-size: large;
+}
 .add:hover {
+    background-color: #ff0000;
+}
+button:hover {
     background-color: #ff0000;
 }
 .container {
