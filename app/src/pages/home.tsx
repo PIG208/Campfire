@@ -50,12 +50,14 @@ export default function Home() {
             <div className="landing-header">
                 <h1 className="brand">Campfire 篝火计划</h1>
                 <Link to="/campfire" className="start">
-                    Start Your Own Fire 自己生火
+                    Start Your Own Fire <br /> 自己生火
                 </Link>
-                <h3 className="trending">Trending Emo 排行 </h3>
-                <div className="trendlist">{trends.map((trend, index)=>
-                    <p>#{index + 1} {trend.topic} {trend.participants}</p>
-                )} </div>
+                <div className="trending-container">
+                    <h3 className="trending">Trending Emo 排行 </h3>
+                    <div className="trendlist">{trends.map((trend, index)=>
+                        <p>#{index + 1} {trend.topic} {trend.participants}</p>
+                    )} </div>
+                </div>
             </div>
 
             <Button

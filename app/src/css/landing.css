@@ -8,6 +8,7 @@ body {
 
 .landing-header {
     padding: 1rem;
+    text-align: center;
 }
 
 .brand {
@@ -22,22 +23,39 @@ body {
     position: absolute;
     top: calc(10vh + 4rem);
     left: 50%;
+    flex-direction: column;
+    align-items: center;
     transform: translateX(-50%);
+}
+
+.trending-container {
+    position: absolute;
+    right: 5%;
+    border-left: solid 1px red;
+    padding-left: 2px;
 }
 
 .trending {
     color: #ff4500;
     text-decoration: none;
-    position: absolute;
-    right: 5%;
+    position: relative;
+    left: 0;
 }
 
 .trendlist {
     color: #ff4500;
     text-decoration: none;
-    position: absolute;
-    top: 3rem;
-    right: 9%;
+    text-align: left;
+    position: relative;
+    left: 0;
+}
+
+@media(max-width: 380px) {
+    .trending-container {
+        right: 50%;
+        transform: translateX(50%);
+        top: 60vh;
+    }
 }
 
 .btn-random {
@@ -46,7 +64,7 @@ body {
     border-radius: 8px;
     position: absolute;
     background-color: #ff4500;
-    top: calc(10vh + 8rem);
+    top: calc(10vh + 11rem);
     left: 50%;
     transform: translateX(-50%);
 }
