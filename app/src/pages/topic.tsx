@@ -11,6 +11,7 @@ import HomeBtn from '../components/home-btn';
 
 export default function Topic() {
     const history = useHistory();
+    const [form] = Form.useForm();
     const [campfire, setCampfire] = useState<Campfire | undefined>();
     const [visible, setVisible] = useState(false);
     const [msgVisible, setMsgVisible] = useState(false);
@@ -40,9 +41,11 @@ export default function Topic() {
             content: data.content,
         }).then((result) => {
             if (result.result === 'success') {
+                form.resetFields();
                 notification.success({
                     message: '成功',
                     description: '等待陌生人收到你的留言',
+                    duration: 0.5,
                 });
                 update();
             }
@@ -57,6 +60,7 @@ export default function Topic() {
                 notification.success({
                     message: '成功',
                     description: '加柴成功',
+                    duration: 0.5,
                 });
                 update();
                 setTimeout(() => {
@@ -115,7 +119,7 @@ export default function Topic() {
                 onCancel={() => setVisible(false)}
                 footer={null}
             >
-                <Form onFinish={handleSubmit} layout="vertical">
+                <Form onFinish={handleSubmit} layout="vertical" form={form}>
                     <Form.Item
                         name="content"
                         rules={[
